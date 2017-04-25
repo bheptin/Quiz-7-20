@@ -5,45 +5,46 @@ import { Link } from 'react-router-dom';
 class Signup extends Component {
 
   render() {
+
     return (
       <div className="container">
       	<div className="row">
       		 <form className="form-horizontal">
 
-             <form  className="form-inline">
-                <div id="firstLast" className="form-group">
-                    <label for="exampleInputName2">First Name</label>
+             <form  className=".col-xs-6 .col-sm-4 col-md-offset-3">
+                <div className="firstName">
+                    <label for="firstName">First Name</label>
                       <input type="text" className="form-control" id="firstName" placeholder="Jane"/>
                 </div>
-                <div id="lastName" className="form-group">
+
+                <div  className="lastName">
                       <label for="lastName">Last Name</label>
                        <input type="email" className="form-control" placeholder="Doe"/>
                 </div>
               </form>
 
-              <form  className="form-inline">
-                 <div id="adress1" className="form-group">
+              <form  className=".col-xs-6 .col-sm-4 col-md-offset-3">
+                 <div className="adress">
                      <label for="address1">Address 1</label>
                        <input type="text" className="form-control" id="address1" placeholder="address line 1"/>
                        <p className="help-block">Street address, P.O. box, company name, c/o</p>
                </div>
-                 <div id="address2" className="form-group">
+                 <div className="adress">
                        <label for="lastName">Address 2</label>
                         <input type="email" className="form-control" placeholder="address line 2"/>
                         <p className="help-block">Apartment, suite , unit, building, floor, etc.</p>
                 </div>
                </form>
 
-
-                      <div className="control-group">
+                    <div className="row">
+                      <div className="col-md-6 col-md-offset-3">
                           <label className="control-label">City / Town</label>
                           <div className="controls">
                               <input id="city" name="city" type="text" placeholder="city" className="input-xlarge"/>
                               <p className="help-block"></p>
                           </div>
                       </div>
-
-                      <div className="control-group">
+                      <div className="col-md-6">
                           <label className="control-label">State</label>
                           <div className="controls">
                               <select id="state" name="state" className="input-xlarge">
@@ -100,23 +101,21 @@ class Signup extends Component {
                               </select>
                           </div>
                       </div>
-
-
-
-
-                      <div className="control-group">
-                          <label className="control-label">Zip / Postal Code</label>
+                  </div>
+                  <div className="row">
+                      <div className="col-md-6 col-md-offset-3">
+                          <label className="control-label">Zip Code / Postal Code</label>
                           <div className="controls">
                               <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code" className="input-xlarge"/>
                               <p className="help-block"></p>
                           </div>
                       </div>
 
-                      <div className="control-group">
+                      <div className="col-md-6">
                           <label className="control-label">Country</label>
                           <div className="controls">
                               <select id="country" name="country" className="input-xlarge">
-                                  <option value="" selected="selected">(please select a country)</option>
+                                  <option value="" selected="selected">(country)</option>
                                   <option value="US">United States</option>
                                   <option value="AF">Afghanistan</option>
                                   <option value="AL">Albania</option>
@@ -359,6 +358,7 @@ class Signup extends Component {
                               </select>
                           </div>
                       </div>
+                    </div>
               </form>
       	</div>
       </div>
